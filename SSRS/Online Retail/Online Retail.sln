@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.35906.104
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Online Retail", "Online Retail.rptproj", "{7B536B24-C982-ECC5-CCC7-FB66B95CC70B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B536B24-C982-ECC5-CCC7-FB66B95CC70B}.Debug|Default.Build.0 = ?|?
+		{7B536B24-C982-ECC5-CCC7-FB66B95CC70B}.Debug|Default.Deploy.0 = ?|?
+		{7B536B24-C982-ECC5-CCC7-FB66B95CC70B}.DebugLocal|Default.Build.0 = ?|?
+		{7B536B24-C982-ECC5-CCC7-FB66B95CC70B}.DebugLocal|Default.Deploy.0 = ?|?
+		{7B536B24-C982-ECC5-CCC7-FB66B95CC70B}.Release|Default.Build.0 = ?|?
+		{7B536B24-C982-ECC5-CCC7-FB66B95CC70B}.Release|Default.Deploy.0 = ?|?
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B79C276-3057-4BF2-9126-0FE7D5A922E9}
+	EndGlobalSection
+EndGlobal

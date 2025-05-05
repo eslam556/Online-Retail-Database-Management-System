@@ -1,0 +1,103 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Online Retail Cubes</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>+quxs9uPVzxNTTG2SCQeLnZGQ4I=04/05/2025 22:41:0704/05/2025 22:03:37</TimeStamp>
+        <ID>
+          <String>Online Retail Sales &amp; Revenue Data Mart</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>/j7JdTiQwcTDeEqiBihccnmOvKw=04/05/2025 22:10:4304/05/2025 22:10:42</TimeStamp>
+        <ID>
+          <String>Online Retail DM</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>+ewXUYgwdx87gCvvbpxnlWNbe/o=04/05/2025 22:51:0604/05/2025 22:50:54</TimeStamp>
+        <ID>
+          <String>Dim Coupon</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>EuHid5T8CTQ0mx0wdi8igC5I6NE=05/05/2025 1:34:5204/05/2025 22:50:54</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>XolOx2zc6anQuLaVl7zzLbGFQso=04/05/2025 22:51:1304/05/2025 22:50:54</TimeStamp>
+        <ID>
+          <String>Dim Payment</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>1Z6xlk4J13KY2KTrnB7eb8agRWs=05/05/2025 1:34:3704/05/2025 22:50:54</TimeStamp>
+        <ID>
+          <String>Dim Product</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>tzBOqN8wal3Gyugcm9pCINmscag=05/05/2025 1:35:1804/05/2025 22:50:54</TimeStamp>
+        <ID>
+          <String>Dim Customer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>GLUIK3oUZHVZLEl5GJ8yCNbI5iM=05/05/2025 1:42:5904/05/2025 22:50:54dEHIs9CWrlh6r4M7GD1KkppJbAk=04/05/2025 23:04:1404/05/2025 22:50:54</TimeStamp>
+        <ID>
+          <String>Sales Performance</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>By/DRfn+u0Dgnn1TAU2uWCq4oL4=05/05/2025 12:46:2305/05/2025 11:09:09TGuTMAR32e2p16LRMgpJ5++2h40=05/05/2025 11:09:0905/05/2025 11:09:09</TimeStamp>
+        <ID>
+          <String>Customer Behavior</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>sWwZnAsLfl4TmP/3wgfrzEYMhGQ=05/05/2025 18:48:1205/05/2025 12:47:11UF0i7DmypKhjuyJNBhGcsBCa0cs=05/05/2025 12:47:1105/05/2025 12:47:11</TimeStamp>
+        <ID>
+          <String>Promotion Effectiveness</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>qLLd6KkJjHzkRg6DpDwQuJw9ca8=04/05/2025 21:59:4504/05/2025 21:59:45</TimeStamp>
+      <ID>
+        <String>Online Retail Cubes</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2025-05-05T15:48:19.88Z</LastDeployed>
+</DeploymentSnapshot>

@@ -1,0 +1,5 @@
+streamlit==1.44.1
+streamlit-lottie
+pandas==2.2.3
+pyodbc==4.0.34
+requests

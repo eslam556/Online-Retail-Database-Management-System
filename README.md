@@ -1,6 +1,6 @@
 # 🛒 ONLINE RETAIL MANAGEMENT SYSTEM
 
-### 📅 April 25, 2025  
+### 📅 May 06, 2025  
 ### 🏢 Information Technological Institute  
 ### 🎓 Power BI Development Track
 
@@ -16,7 +16,7 @@
 
 ## 📌 Executive Summary
 
-The **Online Retail Management System** is a full-stack solution that manages customer purchases, inventory, shipping, and payments. It includes integrated analytics using **SSAS**, interactive reports via **SSRS**, and a web interface built in **Streamlit** for seamless customer interaction.
+The **Online Retail Management System** is a full-stack solution that manages customer purchases, inventory, shipping, and payments. It includes integration using **SSIS**, integrated analytics using **SSAS**, interactive reports via **SSRS**, and a web interface built in **Streamlit** for seamless customer interaction.
 
 ---
 
@@ -38,6 +38,19 @@ Retail businesses need a centralized system to manage inventory, track orders, o
 
 ---
 
+## 🚀 Project Workflow
+
+The development followed a structured data pipeline:
+
+1. **Date Dimension Generation**: A date dimension script was executed to populate calendar attributes.
+2. **ETL Process (SSIS)**: Data was extracted from the OLTP system, transformed, and loaded into a structured Data Mart.
+3. **Data Mart Creation**: Dimension and Fact tables were built to support analytical processing.
+4. **SSAS Cubes**: Built to enable fast and multidimensional insights.
+5. **SSRS Reports**: Developed from the cubes to support operational and strategic reporting.
+6. **Streamlit Web App**: Designed for real-time customer interaction and order placement.
+
+![Project Workflow](https://github.com/eslam556/Online-Retail-Database-Management-System/blob/main/Project%20WorkFlow.jpg)
+---
 ## 🧩 ER Diagram
 
 The ERD illustrates the structure of the database, defining entities such as **Customers**, **Orders**, **Products**, and their relationships:
@@ -48,7 +61,7 @@ The ERD illustrates the structure of the database, defining entities such as **C
 - **One-to-Many**: Orders → Orders_Items  
 - **Many-to-Many**: Orders ↔ Products (via Orders_Items)
 
-![ER Digram](https://github.com/eslam556/Online-Retail-Database-Application/blob/main/Database/ERD.jpg)
+![ER Digram](https://github.com/eslam556/Online-Retail-Database-Management-System/blob/main/Database/ERD.jpg)
 
 ---
 
@@ -61,7 +74,7 @@ The logical schema reflects the real-world relationships:
 - `Coupons`, `Shipping`, and `Payments` are linked to `Orders` via foreign keys  
 - `Feedback` connects `Customers` and `Products`
 
-![Mapping](https://github.com/eslam556/Online-Retail-Database-Application/blob/main/Database/Mappings.jpg)
+![Mapping](https://github.com/eslam556/Online-Retail-Database-Management-System/blob/main/Database/Mappings.jpg)
 
 ---
 
@@ -73,26 +86,63 @@ Implemented using **SQL Server**, the schema includes:
 - Constraints: Primary and foreign keys ensure data relationships.  
 - Data types optimized for performance and scalability.
 
-![Database Digram](https://github.com/eslam556/Online-Retail-Database-Application/blob/main/Database/Database%20Digram.jpg)
+![Database Digram](https://github.com/eslam556/Online-Retail-Database-Management-System/blob/main/Database/Database%20Digram.jpg)
+---
+## 🧱 Data Mart (Star Schema)
+
+A star schema was implemented to support analytical workloads. It consists of:
+
+### Dimension Tables
+- **Dim_Customer**: Customer profiles, location, and segmentation  
+- **Dim_Product**: Product details, stock, category, and price  
+- **Dim_Coupon**: Coupon codes, discounts, usage, and expiration  
+- **Dim_Payment**: Payment method and transaction amount  
+- **Dim_Date**: Calendar attributes for time-based analysis  
+
+### Fact Table
+- **Fact_Sales**: Captures each order transaction, linking to all dimensions with metrics such as quantity, total price, and discount  
+
+This structure enables flexible slicing and aggregation for business intelligence.
+
+![Data Mart Digram](https://github.com/eslam556/Online-Retail-Database-Management-System/blob/main/Data%20Mart/Data%20Mart%20Model.png)
+---
+
+## 🧪 SSIS (SQL Server Integration Services)
+
+**SSIS** was used to design and execute ETL packages that:
+
+- Extract data from the transactional database  
+- Clean and transform fields (e.g., compute account age, mark expired coupons)  
+- Load structured data into dimension and fact tables in the Data Mart  
+- Ensure referential integrity and automate scheduled data loads  
+
+![ETL Pipeline](https://github.com/eslam556/Online-Retail-Database-Management-System/blob/main/SSIS/ETL%20Pipeline.jpg)
 ---
 
 ## 📊 Database Analysis (SSAS)
 
-**SQL Server Analysis Services (SSAS)** was implemented to:
+Three analytical cubes were developed using **SQL Server Analysis Services (SSAS)** to deliver fast, multidimensional insights:
 
-- Transform transactional data into multidimensional cubes  
-- Enable slicing, dicing, drill-down, and aggregation  
-- Support decision-makers with visual KPIs and performance metrics
+- **Sales Performance**: Measures total sales, average order value, and discount impact over time.  
+- **Customer Behavior**: Analyzes order frequency, segment trends, and city/state-level customer patterns.  
+- **Promotion Effectiveness**: Evaluates coupon usage, redemption rates, and sales lift from promotions.
 
+These cubes enable slicing, dicing, and drilling into KPIs to support business decision-making.
+
+![Sales Perfromance Cube](https://github.com/eslam556/Online-Retail-Database-Management-System/blob/main/SSAS/Sales%20Performace%20Cube%20Structure.jpg)
+![Customer Behavior Cube](https://github.com/eslam556/Online-Retail-Database-Management-System/blob/main/SSAS/Customer%20Behavior%20Cube%20Structure.jpg)
+![Promotion Effictivness](https://github.com/eslam556/Online-Retail-Database-Management-System/blob/main/SSAS/Promotion%20Effectivness%20Cube%20Structure.jpg)
 ---
 
 ## 📈 Database Reporting (SSRS)
 
-**SQL Server Reporting Services (SSRS)** provides:
+Reports were created using **SQL Server Reporting Services (SSRS)** based on the three cubes:
 
-- Interactive and paginated reports  
-- Insights into customer feedback trends, product popularity, order revenue, inventory status, and city-based performance  
-- Linked reports for state-level breakdowns
+- **Sales Performance Reports**: Show sales by year, product category, and city with drilldown capabilities.  
+- **Customer Behavior Reports**: Visualize top cities by customer count, segment breakdowns, and customer acquisition trends.  
+- **Promotion Effectiveness Reports**: Display coupon usage frequency, revenue impact, and redemption statistics.
+
+Each report is designed to be interactive and help stakeholders monitor performance and uncover insights.
 
 ---
 
